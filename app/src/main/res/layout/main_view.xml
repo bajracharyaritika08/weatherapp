@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/herobg"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+    <!--    Here Starts the Search Bar!-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+        <EditText
+            android:id="@+id/locationEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Search for places  🔍"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext_background"
+            />
+    </LinearLayout>
+    <!--    Here Ends the Search Bar!-->
+<!--Here starts the main section-->
+<!--    Here starts the city  and date section-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/cityTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="City Name"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:fontFamily="sans-serif-black"
+
+            />
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:text="Wednesday, June 7"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    <!--    Here ends the city  and date section-->
+    <!--        Here starts the temperature displaying screen in degree. -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        >
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/temperature" />
+        <TextView
+            android:id="@+id/tempTv"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:hint="20°"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:fontFamily="sans-serif-black"/>
+        <!--        Here Starts the divider.-->
+        <View
+            android:layout_width="2dp"
+            android:layout_height="150dp"
+            android:background="#B8BFC6" />
+        <!--        Here ends the divider.-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"/>
+
+            <TextView
+                android:id="@+id/descTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Cloudy"
+                android:fontFamily="sans-serif-black"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--        Here ends the temperature displaying screen in degree. -->
+<!--    Wind and humidity section-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="20dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/windsgo"/>
+                    <TextView
+                        android:id="@+id/windTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WIND"
+                        android:fontFamily="sans-serif-black"
+                        android:padding="5dp"
+                        android:textSize="18dp"
+                        android:textColor="@color/white"
+                        android:textAllCaps="true"/>
+            </LinearLayout>
+        <TextView
+            android:id="@+id/windTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="WIND"
+            android:padding="2dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textAllCaps="true"/>
+        </LinearLayout>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="50dp"
+            android:background="#B8BFC6"
+            android:padding="10dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/humidity"/>
+                <TextView
+                    android:id="@+id/humidtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HUMIDITY"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="5dp"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"/>
+            </LinearLayout>
+
+        <TextView
+            android:id="@+id/humidityTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="HUMIDITY"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:padding="2dp" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="50dp"
+            android:background="#B8BFC6"
+            android:padding="10dp"
+            />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/pressure"/>
+            <TextView
+                android:id="@+id/pressuretxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pressure"
+                android:padding="5dp"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:fontFamily="sans-serif-black"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/pressureTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="HUMIDITY"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:padding="2dp" />
+    </LinearLayout>
+    </LinearLayout>
+    <!--    Wind and humidity section-->
+<!--    Recycler view-->
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:textColor="@color/white"
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:scrollbars="horizontal"
+            android:visibility="visible"></androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    <!--    Recycler view-->
+    <!--Here ends the main section-->
+</LinearLayout>
